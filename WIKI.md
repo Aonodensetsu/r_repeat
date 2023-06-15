@@ -49,45 +49,8 @@ average = collect(g) / len(g)  # Gather all the results and get the average
 ```
 Note: This will also create a progess bar while the operation takes place, the option above would leave the terminal empty (and seemingly frozen) for the entire duration:
 ```
-[███████▋                      ] 25.2%
+32%|███▏      | 318/1000 [00:15<00:47,  21.24it/s]
 ```
-<details><summary>Equivalent without collect</summary>
-
-The equivalent code without using the collect function (but still using this library for the ProgressBar) would be the following:
-```python
-from r_repeat import ProgressBar
-sum = 0
-pb = ProgressBar()  # Create the bar
-for i, v in enumerate(g):  # You need to track the progress with enumerate
-    sum += v
-    pb.progress(i / len(g))  # Update the bar to the currently completed fraction
-pb.clearline()  # Clear the line
-average = sum / len(g)
-```
-<details><summary>Equivalent without library (for fun, don't actually use this)</summary>
-
-```python
-sum = 0
-for i, v in enumerate(g):  # You need to track the progress with enumerate
-    sum += v
-    # Update the bar to the currently completed fraction
-    symbols = [' ', '▏', '▎', '▍', '▌', '▋', '▊', '▉', '█']
-    fraction = i / len(g)
-    percent = 100 * fraction
-    filled = int(30 * fraction)
-    decimal = 30 * fraction - filled
-    partial = 7
-    frac = 1/8
-    for j in range(8):
-        if j * frac <= decimal < (j + 1) * frac:
-            partial = j
-            break
-    print('\r\033[K[' + filled * symbols[-1] + symbols[partial] + (29 - filled) * symbols[0] + ']' + f' {percent:.1f}%', end='')
-print('\r\033[K', end='')
-average = sum / len(g)
-```
-</details>
-</details>
 
 You may also choose to forgo calling the function at all if you use the collect function
 
@@ -135,7 +98,7 @@ This is available by setting the `collector_enumerate` keyword. The index is pas
 collect(f, collector_enumerate=True, collector=lambda a, b, i: a + b)
 ```
 </details>
-<details open><summary>Seeding RNG</summary>
+<details><summary>Seeding RNG</summary>
 
 Many probabilistic functions need a few random values, which - when repeating the function many times - you need to remember to update  
 When using the collect function, you can't change parameters in the middle of repeating, so you have to use the random functions directly in your code  
@@ -175,20 +138,5 @@ f: Callable[..., Any]
 # The function to repeat
 n: int
 # The amount of times to repeat
-```
-</details>
-
-# ProgressBar
-### A simple, nice looking progress bar
-Also used in the collect function
-<details><summary>Available parameters</summary>
-
-```python
-detail: int = 30
-# Determines the length of the progress bar in characters
-showPercent: bool = True
-# Whether to show the current percentage as well
-symbols: list = [' ', '▏', '▎', '▍', '▌', '▋', '▊', '▉', '█']
-# The list of symbols to use in the progress bar, sorted from "emptiest" to "fullest"
 ```
 </details>

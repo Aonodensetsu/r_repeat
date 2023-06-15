@@ -13,7 +13,7 @@
 # Example:
 ```python
 from r_repeat import repeat, seed, collect
-@repeat(n=10**6)  # run this function 1000000 times
+@repeat(n=1e6)  # run this function 1000000 times
 @seed(kwarg=['rng1', 'rng2'])  # insert random numbers into rng1 and rng2
 def f(rng1, bias, rng2):
 	return (rng1 + bias) >= rng2
@@ -24,6 +24,6 @@ print(f'{sum} wins and {len(g)-sum} losses')
 ```
 Output:
 ```
-[██████████████████▍           ] 61.1%    (while working)
+22%|██▏       | 217/1000 [00:21<01:18,  9.95it/s]    (while working)
 574945 wins and 425055 losses    (after finished)
 ```
