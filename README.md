@@ -1,4 +1,4 @@
-## Simple library for gathering results from probabilistic functions
+## Simple library for gathering results from stochastic functions
 
 ![size](https://img.shields.io/github/repo-size/aonodensetsu/r_repeat?label=size) ![files](https://img.shields.io/github/directory-file-count/aonodensetsu/r_repeat) ![lines](https://img.shields.io/tokei/lines/github/aonodensetsu/r_repeat)   
 ![py dep](https://img.shields.io/pypi/pyversions/r-repeat) [![version](https://img.shields.io/pypi/v/r-repeat)](https://pypi.org/project/r-repeat/0.1.1/)  
