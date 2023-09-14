@@ -1,1 +1,1 @@
-from r_repeat.main import repeat, collect, seed, Repeatable
+from r_repeat.main import repeat, seed, Repeatable
