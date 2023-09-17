@@ -28,10 +28,13 @@ class Repeatable(Callable, Generic[T]):
                  keep_cache: bool = False
                  ) -> None:
         self.f = f
+        self.args = ()
+        self.kwargs = {}
         self.i = 0
         self.n = int(n)
         self.repeat_enumerate = repeat_enumerate
         self.keep_cache = keep_cache
+        self.cache = []
 
     def __call__(self, *args, **kwargs) -> Repeatable[..., T]:
         """

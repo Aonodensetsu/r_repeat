@@ -1,7 +1,7 @@
 ## Simple library for gathering results from stochastic functions
 
 ![size](https://img.shields.io/github/languages/code-size/aonodensetsu/r_repeat) ![files](https://img.shields.io/github/directory-file-count/aonodensetsu/r_repeat)   
-![py dep](https://img.shields.io/pypi/pyversions/r-repeat) [![version](https://img.shields.io/pypi/v/r-repeat)](https://pypi.org/project/r-repeat/0.1.1/)  
+![py dep](https://img.shields.io/pypi/pyversions/r-repeat) [![version](https://img.shields.io/pypi/v/r-repeat)](https://pypi.org/project/r-repeat/0.3.6/)  
 ![license](https://img.shields.io/pypi/l/r-repeat) [![downloads](https://img.shields.io/badge/releases-here-green?logo=pypi)](https://pypi.org/project/r-repeat/#history)  
 [![downloads](https://img.shields.io/badge/wiki-here-pink)](https://github.com/Aonodensetsu/r_repeat/blob/main/WIKI.md) [![downloads](https://img.shields.io/badge/changelog-here-pink)](https://github.com/Aonodensetsu/r_repeat/blob/main/CHANGELOG.md)  
 
@@ -24,6 +24,6 @@ print(f'{sum} wins and {len(g)-sum} losses')
 ```
 Output:
 ```
-22%|██▏       | 217/1000 [00:21<01:18,  9.95it/s]    (while working)
+22%|██▏       | 217913/1000000 [00:21<01:18,  9952.1it/s]    (while working)
 574945 wins and 425055 losses    (after finished)
 ```
