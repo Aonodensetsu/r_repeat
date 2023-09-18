@@ -1,3 +1,4 @@
+Version 0.3.7 - removes progress bar on finish  
 Version 0.3.6 - init fixed  
 Version 0.3.5 - moved stuff around  
 Version 0.3.0 - moved collect into the class, added drop  

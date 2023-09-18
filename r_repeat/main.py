@@ -85,7 +85,7 @@ class Repeatable(Callable, Generic[T]):
             res = reduce(collector, self.cache)
         else:
             res = next(self)
-        for i, v in tqdm(enumerate(self), initial=self.i, total=self.n):
+        for i, v in tqdm(enumerate(self), initial=self.i, total=self.n, leave=False):
             if collector_enumerate:
                 res = collector(res, v, self.i + i)
             else:
