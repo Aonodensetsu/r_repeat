@@ -4,8 +4,7 @@
 ![py dep](https://img.shields.io/pypi/pyversions/r-repeat) [![version](https://img.shields.io/pypi/v/r-repeat)](https://pypi.org/project/r-repeat/0.3.7/)  
 ![license](https://img.shields.io/pypi/l/r-repeat) [![downloads](https://img.shields.io/badge/releases-here-green?logo=pypi)](https://pypi.org/project/r-repeat/#history)  
 [![downloads](https://img.shields.io/badge/wiki-here-pink)](https://github.com/Aonodensetsu/r_repeat/blob/main/WIKI.md) [![downloads](https://img.shields.io/badge/changelog-here-pink)](https://github.com/Aonodensetsu/r_repeat/blob/main/CHANGELOG.md)  
-[![ko-fi](https://img.shields.io/badge/show-support-555599?style=for-the-badge&logo=kofi&link=https%3A%2F%2Fko-fi.com%2Faonodensetsu
-)](https://ko-fi.com/aonodensetsu)
+[![ko-fi](https://img.shields.io/badge/show-support-555599?style=for-the-badge&logo=kofi)](https://ko-fi.com/aonodensetsu)
 
 # Usage:
 1. `pip install r_repeat`
